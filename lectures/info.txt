@@ -1,0 +1,142 @@
+////////////////////////////  Promisses /////////////////////
+
+// function fetchData(dataId){
+//     setTimeout(()=> {
+//         console.log('Data received', dataId);
+//     },500)
+// }
+// fetchData()
+
+
+// function getData(id,nextData) {
+//     setTimeout(()=>{
+//         console.log('data',id);
+//         if(nextData){
+//             nextData();
+//         }
+//     },100)
+// }
+
+// getData(1,()=>{
+//     getData(2,()=>{
+//         getData(5)
+//     })
+// })
+
+
+// let Promise = new Promise((resolve,reject)=>{
+//     console.log('promise');
+//     resolve('completed')
+// })
+
+// console.log(Promise);
+
+
+
+// function getData(dataId){
+//     return new Promise((resolve,reject)=>{
+//         setTimeout(()=>{
+//             console.log('Data found of', dataId);
+//             resolve("Data Found")
+//             reject('error ')
+//         },2000)
+//     })
+// }
+// //.then =  jo resolve ka mess hai usko excess kar ne ke liye
+// getData(1)
+// .then((res)=>{
+//     return getData(2)
+// })
+// .then((res)=>{
+//     return getData(3)
+// })
+// .catch((res)=>{
+//     console.log(res);
+// })
+
+
+// .catch = jese hi value reject huva vese hi reject ka mess print kare ga
+// .json = ek Promise retturn kartta haia 
+
+// homework Question
+// make a database using Object
+// make an array of query/dataId
+// use Promises - if dataId PRRESENT IN DATABASE resolve  and print the value else reject it
+
+// let db = {
+//     1:'Data 1',
+//     2:'Data 2',
+//     3:'Data 3'
+// }
+
+// let dbo = [1,2,3,4,5]
+
+// function getData(dataId){
+//     return new Promise((resolve,reject)=>{
+//         setTimeout(()=>{
+//             if(dataId!=4){console.log('Data found of', dataId);
+//                 resolve("Data Found")    
+//             }else{
+//                 reject('error ')
+//             }
+//         },2000)
+//     })
+// }
+
+// //.then =  jo resolve ka mess hai usko excess kar ne ke liye
+// getData(1)
+// .then((res)=>{
+//     for(let i=0;i<db.lenght;i++){
+//         return getData(i)
+//     }
+// })
+
+// return getData(2)
+// })
+// .then((res)=>{
+//     return getData(3)
+// })
+// .catch((res)=>{
+//     console.log(res);
+// })
+
+
+// class p {
+//     constructor(name,age){
+//         this.name=name
+//         this.age = age
+//     }
+// }
+
+
+// p.prototype.greet = function(){
+//     console.log('hello' ${});
+// }
+
+
+/////////////////closures ////////////////////////
+
+
+// function makeCounter(){
+//     let count = 0
+//     return function(){
+//         return count++
+//     }
+// }
+
+// let counter = makeCounter()
+// console.log(counter());
+// console.log(counter());
+// console.log(counter());
+
+// function add(){
+//     let num1=10
+//     return function(num2){
+//         return num1+num2
+//     }
+// }
+
+// let sample = add()
+// console.log(sample(100));
+// console.log(sample(200));
+
